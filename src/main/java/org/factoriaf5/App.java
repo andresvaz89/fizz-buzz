@@ -13,22 +13,24 @@ public class App
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Introduce un numero");
-        int numIntroducido = sc.nextInt();
+        int inputNumber = sc.nextInt();
+
+        String stringyfiedInputNumber = Integer.toString(inputNumber);
         
-        if (numIntroducido%3==0 && numIntroducido%5==0){
+        if (inputNumber%3==0 && inputNumber%5==0){
             System.out.println("FizzBuzz");
 
         }
-        else if (numIntroducido%3==0){
+        else if (inputNumber%3==0 || stringyfiedInputNumber.contains("3")){
             System.out.println("Fizz");
 
         }
-        else if (numIntroducido%5==0){
+        else if (inputNumber%5==0|| stringyfiedInputNumber.contains("5")){
             System.out.println("Buzz");
             
         }
         else{
-            System.out.println(numIntroducido);
+            System.out.println(inputNumber);
             
         }
         sc.close();
